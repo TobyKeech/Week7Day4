@@ -10,7 +10,6 @@ const Beer = ({ beer, onBeerClicked }) => {
     return (
         <>
             <li onClick={handleClick}>{beer["name"]}</li>
-            <form> onSubmit = {handleSubmit} <button> Add to Favs</button></form>
         </>
 
     )

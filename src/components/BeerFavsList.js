@@ -1,16 +1,16 @@
-const BeerFavsList = ({beers, handleSubmit}) => {
+// const BeerFavsList = ({beers, addToFaves}) => {
 
 
-const 
+// const beerFavItems = 
 
 
 
-    return ( 
-        <>
+//     return ( 
+//         <>
 
 
-        </>
-     );
-}
+//         </>
+//      );
+// }
  
-export default BeerFavsList;
+// export default BeerFavsList;

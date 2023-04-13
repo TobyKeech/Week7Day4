@@ -5,7 +5,8 @@ import BeerList from "../components/BeerList";
 
 const BeerContainer = () => {
     const [beers, setBeers] = useState([]);
-    const [clickedBeer, setClickedBeer] = useState(null)
+    const [clickedBeer, setClickedBeer] = useState(null);
+    const [faveBeers, setFaveBeers] = useState([]);
 
     useEffect(() => {
         getBeers();
@@ -21,6 +22,11 @@ const BeerContainer = () => {
 
     const onBeerClicked = function (beer) {
         setClickedBeer(beer)
+
+    
+    const addToFaves = (beer) => {
+        setFaveBeers([...faveBeers, beer])
+    }
 
     }
 
