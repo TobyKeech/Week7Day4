@@ -1,6 +1,10 @@
-const BeerDetail = () => {
+const BeerDetail = ({beer}) => {
     return (  
-        <h1>BeerDetail</h1>
+        <>
+        <div><b>This beer is called {beer.name}</b></div>
+        <div>{beer.tagline}</div>
+        <div>{beer.description}</div>
+        </>
     );
 }
  
