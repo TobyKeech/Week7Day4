@@ -1,7 +1,21 @@
 import React from 'react';
 
-const Beer = ({beer}) => {
-    return <li>{beer["name"]}</li>
+const Beer = ({beer, onBeerClicked}) => {
+
+    const handleClick = function() {
+        onBeerClicked(beer)
+        console.log(beer.name)
+    }
+
+
+
+
+    return (
+    <>
+    <li onClick={handleClick}>{beer["name"]}</li>
+    </>
+
+    )
 
 }
  

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import BeerDetail from '../components/BeerDetail';
 
 import BeerList from "../components/BeerList";
 
 const BeerContainer = () => {
     const [beers, setBeers] = useState([]);
+    const [clickedBeer, setClickedBeer] = useState(null)
 
     useEffect(() => {
         getBeers();
@@ -17,11 +19,20 @@ const BeerContainer = () => {
         .then(beers => console.log(beers))
     }
 
+    const onBeerClicked = function (beer) {
+        setClickedBeer(beer)
+
+    }
 
     return (
         <>
+        <div>
             <h2>BeerList</h2>
-            <BeerList beers = {beers} />
+            <BeerList beers = {beers} onBeerClicked = {onBeerClicked} />
+                {clickedBeer ? <BeerDetail beer={clickedBeer}/> : null}
+            
+        </div>
+           
         </>
 
 
@@ -29,3 +40,6 @@ const BeerContainer = () => {
 }
 
 export default BeerContainer;
+
+ {/* if clickedBeer is truthy then render the BeerDetail component  */}
+                    {/* else render null */}
